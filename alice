@@ -1,2 +1,15 @@
 #!/bin/sh
-erl -pa $PWD/ebin -pa $PWD/deps/*/ebin -s reloader -boot alice $*
+ALICE_DIR=/usr/lib/erlang/lib/alice
+
+cd $ALICE_DIR
+
+make
+
+if [ ! -f ebin/rest_app.boot ]; then
+    make boot
+fi
+
+erl -pa $ALICE_DIR/ebin -pa $ALICE_DIR/deps/*/ebin -s reloader -boot alice $*
+
+
+

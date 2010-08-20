@@ -22,7 +22,10 @@ install: build install-stamp
 	cp -r $(CURDIR)/scripts/* $(FAKE_SRC_DIR)/scripts
 	cp -r $(CURDIR)/src/* $(FAKE_SRC_DIR)/src
 
-	install -m 644 -o root -g root $(CURDIR)/alice $(CURDIR)/debian/alice/usr/sbin
+	install -m 644 -o root -g root $(CURDIR)/Emakefile $(FAKE_SRC_DIR)
+	install -m 644 -o root -g root $(CURDIR)/Makefile $(FAKE_SRC_DIR)
+
+	install -m 755 -o root -g root $(CURDIR)/alice $(CURDIR)/debian/alice/usr/sbin
 
 install-stamp:
 	dh install

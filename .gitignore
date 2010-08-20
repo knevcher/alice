@@ -10,3 +10,8 @@ ebin/*.boot
 ebin/*.rel
 ebin/*.script
 web/
+
+debian/alice*
+debian/files
+build-stamp
+install-stamp

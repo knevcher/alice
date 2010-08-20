@@ -1,0 +1,8 @@
+usr/sbin
+usr/lib/erlang/lib/alice
+usr/lib/erlang/lib/alice/ebin
+usr/lib/erlang/lib/alice/deps
+usr/lib/erlang/lib/alice/include
+usr/lib/erlang/lib/alice/scripts
+usr/lib/erlang/lib/alice/src
+

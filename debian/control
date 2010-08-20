@@ -1,0 +1,13 @@
+Source: alice
+Priority: optional
+Maintainer: Knyazev Andrey <knevcher@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Section: devel
+Homepage: http://alicetheapp.com/
+
+Package: alice
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, rabbitmq-server, erlang-dev, erlang-src, erlang-tools
+Description: A RESTful access to the RabbitMQ queue server and administration functions
+ A RESTful access to the RabbitMQ queue server and administration functions

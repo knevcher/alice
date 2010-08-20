@@ -1,0 +1,2 @@
+#!/bin/sh
+erl -pa $PWD/ebin -pa $PWD/deps/*/ebin -s reloader -boot alice $*

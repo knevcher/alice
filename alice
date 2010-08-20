@@ -3,8 +3,6 @@ ALICE_DIR=/usr/lib/erlang/lib/alice
 
 cd $ALICE_DIR
 
-make
-
 if [ ! -f ebin/rest_app.boot ]; then
     make boot
 fi

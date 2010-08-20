@@ -1,7 +1,7 @@
 Source: alice
 Priority: optional
 Maintainer: Knyazev Andrey <knevcher@gmail.com>
-Build-Depends: debhelper (>= 7)
+Build-Depends: debhelper (>= 7), erlang-dev, erlang-src, erlang-tools
 Standards-Version: 3.8.3
 Section: devel
 Homepage: http://alicetheapp.com/

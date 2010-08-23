@@ -8,6 +8,6 @@ Homepage: http://alicetheapp.com/
 
 Package: alice
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, rabbitmq-server, erlang, erlang-dev, erlang-src, erlang-tools
+Depends: ${shlibs:Depends}, ${misc:Depends}, rabbitmq-server, erlang-dev, erlang-src, erlang-tools
 Description: A RESTful access to the RabbitMQ queue server and administration functions
  A RESTful access to the RabbitMQ queue server and administration functions

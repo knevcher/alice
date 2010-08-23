@@ -1,11 +1,6 @@
 Форк проекта http://github.com/auser/alice/
 
-После сборки и установки пакета сервер можно запустить коммандой:
-alice -setcookie COOKIE -sname alice@SERVER
-
-где:
-COOKIE - содержимое файла /var/lib/rabbitmq/.erlang.cookie
-SERVER - вывод результата erlang функции net_adm:localhost().
+Сервис запускается через init-скрипт /etc/init.d/alice [start|stop|status]
 
 После запуска к сервису можно отправлять запросы типа: curl -i http://localhost:9999/users
 Подробности на сайте проекта

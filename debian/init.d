@@ -57,7 +57,7 @@ case "$1" in
 
         [ -n "$DODTIME" ] && sleep $DODTIME
 
-	start-stop-daemon --start --quite --make-pidfile --background \
+	start-stop-daemon --start --quiet --make-pidfile --background \
 	    --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS || true
 
         ;;

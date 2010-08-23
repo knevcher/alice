@@ -7,7 +7,7 @@ if [ ! -f ebin/rest_app.boot ]; then
     make boot
 fi
 
-erl -pa $ALICE_DIR/ebin -pa $ALICE_DIR/deps/*/ebin -s reloader -boot alice $*
+erl -pa $ALICE_DIR/ebin -pa $ALICE_DIR/deps/*/ebin -s reloader -boot alice  $*
 
 
 

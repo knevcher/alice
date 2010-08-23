@@ -38,7 +38,7 @@ case "$1" in
 
         cd $ALICE_DIR
 
-	if [ ! -f ebin/rest_app.boot ]; then
+	if [ ! -f ebin/alice.boot ]; then
 	    make boot
 	fi
 

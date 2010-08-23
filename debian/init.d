@@ -36,6 +36,12 @@ case "$1" in
   start)
         echo -n "Starting $DESC: "
 
+        cd $ALICE_DIR
+
+	if [ ! -f ebin/rest_app.boot ]; then
+	    make boot
+	fi
+
         start-stop-daemon --start --quiet --make-pidfile --background \
 	    --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS || true
 
@@ -44,7 +50,7 @@ case "$1" in
   stop)
         echo -n "Stopping $DESC: "
 
-        start-stop-daemon --stop --pidfile $PIDFILE || true
+        start-stop-daemon --stop --quiet --pidfile $PIDFILE || true
 
         echo -n "$NAME."
 
@@ -53,7 +59,7 @@ case "$1" in
 
         echo -n "Restarting $DESC: "
 
-	start-stop-daemon --stop --pidfile $PIDFILE || true
+	start-stop-daemon --stop --quiet --pidfile $PIDFILE || true
 
         [ -n "$DODTIME" ] && sleep $DODTIME
 

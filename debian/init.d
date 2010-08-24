@@ -63,6 +63,8 @@ case "$1" in
 
         [ -n "$DODTIME" ] && sleep $DODTIME
 
+        cd $ALICE_DIR
+
 	start-stop-daemon --start  --chdir "$PWD" --quiet --make-pidfile --background \
 	    --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS || true
 

@@ -42,7 +42,7 @@ case "$1" in
 	    make boot
 	fi
 
-        start-stop-daemon --start --quiet --make-pidfile --background \
+        start-stop-daemon --start --chdir "$PWD" --quiet --make-pidfile --background \
 	    --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS || true
 
         echo -n "$NAME."
@@ -63,7 +63,7 @@ case "$1" in
 
         [ -n "$DODTIME" ] && sleep $DODTIME
 
-	start-stop-daemon --start --quiet --make-pidfile --background \
+	start-stop-daemon --start  --chdir "$PWD" --quiet --make-pidfile --background \
 	    --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS || true
 
         ;;
